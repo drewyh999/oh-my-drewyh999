@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "console_title_template": "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}",
+  "version": 2,
+  "foreground": "#0c991c",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "foreground": "#e98126",
+          "background": "#203acd",
+          "template": "\uF197  {{ .HostName }} "
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0b0",
+          "foreground": "#1404f6",
+          "background": "#ffffff",
+          "template": "{{ if eq .OS \"darwin\"}} \uf535 {{end}}{{ if eq .OS \"windows\"}}\ue62a{{end}}{{ if eq .OS \"linux\"}} \ue73a {{end}}"
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "powerline_symbol": "\uE0b0",
+          "foreground": "#000000",
+          "background": "#e98126",
+          "template": "\uf007 {{ .UserName }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#5a32a5",
+          "properties": {
+            "style": "agnoster"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "az",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#9ec3f0",
+          "template": " \uFD03 {{ .EnvironmentName }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#100e23",
+          "background": "#42c96f",
+          "template": " \uf51a {{ .Venv }} "
+        }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#0c991c",
+    "template": "{{.Shell}} out >>> "
+  }
+}
