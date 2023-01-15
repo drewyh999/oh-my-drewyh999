@@ -80,9 +80,10 @@
       ]
     }
   ],
+  "palette": {
+    "c-badge-folder": "#5a32a5"
+  },
   "transient_prompt": {
-    "background": "transparent",
-    "foreground": "#0c991c",
-    "template": "{{.Shell}} out >>> "
+    "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<p:c-badge-folder>\uE0B6</><#ffffff,p:c-badge-folder><b>{{.Shell}}</b></><#ffffff,p:c-badge-folder> \uEbb1 </><p:c-badge-folder>\uE0B4</> {{ end }}"
   }
 }
