@@ -32,36 +32,16 @@
           "foreground": "#000000",
           "background": "#e98126",
           "template": "\uf007 {{ .UserName }}"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
+        },
         {
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#5a32a5",
+          "foreground": "p:c-folder-foreground",
+          "background": "p:c-badge-folder",
           "properties": {
             "style": "agnoster"
           }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "type": "az",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#000000",
-          "background": "#9ec3f0",
-          "template": " \uFD03 {{ .EnvironmentName }}"
         }
       ]
     },
@@ -78,11 +58,43 @@
           "template": " \uf51a {{ .Venv }} "
         }
       ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "az",
+          "style": "diamond",
+          "leading_diamond": "\uE0c5",
+          "trailing_diamond": "\uE0c4",
+          "foreground": "#100e23",
+          "background": "#1ed6e3",
+          "template": " \ufd03 Subscription:{{.Name}} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "diamond",
+          "leading_diamond": "\uE0b6",
+          "trailing_diamond": "\uE0b0",
+          "foreground": "#3cec7f",
+          "background": "#9d9d9d",
+          "template": " >>>> "
+        }
+      ]
     }
   ],
   "palette": {
     "c-badge-folder": "#5a32a5",
-    "c-hostname": "#1404f6"
+    "c-hostname": "#1404f6",
+    "c-folder-foreground": "#ffffff"
   },
   "transient_prompt": {
     "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<p:c-badge-folder>\uE0B6</><#ffffff,p:c-badge-folder><b>{{.Shell}}</b></><#ffffff,p:c-badge-folder> \uf101</><p:c-badge-folder>\uE0B4</> {{ end }}"
