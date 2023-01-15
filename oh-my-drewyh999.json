@@ -81,9 +81,10 @@
     }
   ],
   "palette": {
-    "c-badge-folder": "#5a32a5"
+    "c-badge-folder": "#5a32a5",
+    "c-error": "#bf1414"
   },
   "transient_prompt": {
-    "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<p:c-badge-folder>\uE0B6</><#ffffff,p:c-badge-folder><b>{{.Shell}}</b></><#ffffff,p:c-badge-folder> \uEbb1 </><p:c-badge-folder>\uE0B4</> {{ end }}"
+    "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<p:c-badge-folder>\uE0B6</><#ffffff,p:c-badge-folder><b>{{.Shell}}</b></><#ffffff,p:c-badge-folder> \uf101</><p:c-badge-folder>\uE0B4</> {{ end }}"
   }
 }
