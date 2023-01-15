@@ -13,8 +13,8 @@
           "type": "text",
           "style": "diamond",
           "leading_diamond": "\ue0b6",
-          "foreground": "#e98126",
-          "background": "#203acd",
+          "foreground": "#ffffff",
+          "background": "p:c-hostname",
           "template": "\uF197  {{ .HostName }} "
         },
         {
@@ -23,7 +23,7 @@
           "powerline_symbol": "\uE0b0",
           "foreground": "#1404f6",
           "background": "#ffffff",
-          "template": "{{ if eq .OS \"darwin\"}} \uf535 {{end}}{{ if eq .OS \"windows\"}}\ue62a{{end}}{{ if eq .OS \"linux\"}} \ue73a {{end}}"
+          "template": "{{ if eq .OS \"darwin\"}} \uf535 {{end}}{{ if eq .OS \"windows\"}} \ue62a {{end}}{{ if eq .OS \"linux\"}} \ue73a {{end}}"
         },
         {
           "type": "text",
@@ -82,7 +82,7 @@
   ],
   "palette": {
     "c-badge-folder": "#5a32a5",
-    "c-error": "#bf1414"
+    "c-hostname": "#1404f6"
   },
   "transient_prompt": {
     "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_TRANSIENT)) }}<p:c-badge-folder>\uE0B6</><#ffffff,p:c-badge-folder><b>{{.Shell}}</b></><#ffffff,p:c-badge-folder> \uf101</><p:c-badge-folder>\uE0B4</> {{ end }}"
