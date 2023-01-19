@@ -91,13 +91,14 @@
             "{{ if gt .Behind 0 }}#C792EA{{ end }}"
           ],
           "foreground": "#011627",
-          "powerline_symbol": "\ue0b0",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "style": "powerline",
+          "style": "diamond",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<#ef5350> \uf046 {{ .Staging.String }}</>{{ end }} ",
           "type": "git"
         },
